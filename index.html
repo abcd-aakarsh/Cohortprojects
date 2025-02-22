@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bmi</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>BMI Calculator</h1>
+      <div class="flex-box">
+        <div class="bmi-intro">
+          <h2>What is BMI?</h2>
+          <p>
+            BMI is a measurement of a person's leanness or compulence based on
+            their height and weight,and is intended to quantify tissue mass.It
+            is widely used as a general indicator of whether a person has a
+            healthy body weight for their height.
+          </p>
+        </div>
+        <div>
+          <div class="bmi-box">
+            <label for="height" class="labels">Height in cm : </label
+            ><input id="height" type="text" required class="inputs" />
+            <label for="weight" class="labels w">Weight in kg : </label
+            ><input id="weight" type="text" required class="inputs" />
+            <button id="submit">Submit</button>
+          </div>
+          <p id="bmi-container">Your BMI is : --</p>
+          <p id="bmi-status">Your Status is : --</p>
+        </div>
+        <div class="table">
+          <h3>BMI table for adults</h3>
+          <table class="table-box">
+            <tr>
+              <th>Classification</th>
+              <th>BMI range - kg//m<sup>2</sup></th>
+            </tr>
+            <tr>
+              <td class="red">Severe Thinness</td>
+              <td class="red">< 16</td>
+            </tr>
+            <tr>
+              <td class="pink">Moderate Thinness</td>
+              <td class="pink">16 - 17</td>
+            </tr>
+            <tr>
+              <td class="yellow">Mild Thinness</td>
+              <td class="yellow">17 - 18.5</td>
+            </tr>
+            <tr>
+              <td class="green">Normal</td>
+              <td class="green">18.5 - 25</td>
+            </tr>
+            <tr>
+              <td class="yellow">Overweight</td>
+              <td class="yellow">25 - 30</td>
+            </tr>
+            <tr>
+              <td class="pink">Obese Class 1</td>
+              <td class="pink">30 - 35</td>
+            </tr>
+            <tr>
+              <td class="red">Obese Class 1</td>
+              <td class="red">> 35</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
