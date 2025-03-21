@@ -7,17 +7,72 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="board">
-        <h2 class="board-title">Todo</h2>
-        <div class="item-container">
-          <p class="items">Learn React</p>
-          <p class="items">Learn Javascript</p>
-          <p class="items">Learn React</p>
+    <div class="app">
+      <h1>Kanban Board</h1>
+      <div class="container">
+        <div class="board">
+          <div class="board-header">
+            <div>
+              <h2 class="board-title">
+                Todo <span class="numItems">(2)</span>
+              </h2>
+            </div>
+            <button class="delete-board">❌</button>
+          </div>
+          <div class="item-container">
+            <div class="items" draggable="true"><p>Learn React</p></div>
+            <div class="items" draggable="true"><p>Learn Javascript</p></div>
+          </div>
+        </div>
+        <div class="board">
+          <div class="board-header">
+            <div>
+              <h2 class="board-title">
+                In Progress <span class="numItems">(2)</span>
+              </h2>
+            </div>
+            <button class="delete-board">❌</button>
+          </div>
+          <div class="item-container">
+            <div class="items" draggable="true"><p>Learn React</p></div>
+            <div class="items" draggable="true"><p>Learn Javascript</p></div>
+          </div>
+        </div>
+        <div class="board">
+          <div class="board-header">
+            <div>
+              <h2 class="board-title">
+                Done <span class="numItems">(2)</span>
+              </h2>
+            </div>
+            <button class="delete-board">❌</button>
+          </div>
+          <div class="item-container">
+            <div><p class="items" draggable="true">Learn React</p></div>
+            <div class="items" draggable="true"><p>Learn Javascript</p></div>
+          </div>
+        </div>
+
+        <div class="before">
+          <p id="open-modal" class="button">Create Board</p>
+          <p class="button" id="add-item">Add Item</p>
+        </div>
+
+        <div id="modal" class="closed-modal">
+          <div id="close-modal">
+            <button>❌</button>
+          </div>
+          <div class="modal-main">
+            <input
+              type="text"
+              placeholder="Enter Board title"
+              id="title-input"
+            />
+            <button id="create-board">Create</button>
+          </div>
         </div>
       </div>
-      <div class="board"><h2 class="board-title">In Progress</h2></div>
-      <div class="board"><h2 class="board-title">Document</h2></div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
